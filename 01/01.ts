@@ -8,8 +8,10 @@ export function mult (a: number, b: number){
 }
 
 
-const sentence = 'Hello, my friend!'
-
 export function splitIntoWords (sentence: string) {
-    return ['hello', 'my', 'friends']
+    return sentence.toLowerCase().split(' ')
+        .filter(w => w !== '' && w !== '-')
+        .map(w=>w.replace('!',''))
+        .map(w=>w.replace('.',''))
+        .map(w=>w.replace('-',''))
 }

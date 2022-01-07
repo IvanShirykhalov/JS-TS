@@ -71,6 +71,7 @@ export type AddressType = {
 }
 
 export type HousesType = {
+    id?: number
     builtAt: number
     repaired: boolean
     address: AddressType

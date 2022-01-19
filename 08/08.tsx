@@ -17,7 +17,7 @@ type UsersType = {
 }
 
 let user = {id: 12124, name: 'Vasiliy'}
-users[user.id] = users // добавляем user = {id: 12124, name: 'Vasiliy'} в массив users
+//users[user.id] = users // добавляем user = {id: 12124, name: 'Vasiliy'} в массив users
 // если юзер с id 12124 уже был - он перезатрется
 delete users[user.id] // таким образом мы мгновенно можем удалить юзера
 // в данном случае {id: 12124, name: 'Vasiliy'}

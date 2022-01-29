@@ -1,24 +1,24 @@
 function increaseAge(u: Usertype) {
-    u.age++
+    u.hair++
 }
 
 type Usertype = {
     name: string
-    age: number
+    hair: number
     address: {title: string}
 }
 
 test('reference type test', () => {
     let user: Usertype = {
         name: 'Igor',
-        age: 45,
+        hair: 45,
         address:{
             title: 'Moscow'
         }
     }
     increaseAge(user)
 
-    expect(user.age).toBe(46)
+    expect(user.hair).toBe(46)
 
     let superIgor = user
     superIgor.name = 'superIgor'
@@ -60,7 +60,7 @@ test('value type test', ()=>{
 test('address test', () => {
     let user: Usertype = {
         name: 'Igor',
-        age: 45,
+        hair: 45,
         address:{
             title: 'Moscow'
         }
@@ -68,7 +68,7 @@ test('address test', () => {
 
     let user2: Usertype = {
         name: 'Valera',
-        age: 54,
+        hair: 54,
         address: user.address
     }
     // на данный момент у нас 3 объекта user, user2 и address
